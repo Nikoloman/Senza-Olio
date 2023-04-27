@@ -1,0 +1,178 @@
+:root {
+    --primary: #E8E5E5;
+    --primary_dark: #919191;
+    --secondary: #E6C210;
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para box model */
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(0, 0%, 97%);
+    background-color: #ffd859;
+}
+
+/* Navigation */
+.navigation_bg {
+    background-color: var(--primary_dark);
+}
+
+.principal_navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.principal_navigation a {
+    display: block;
+    text-align: center;
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.principal_navigation a:hover{
+    background-color: var(--primary);
+    color: black;
+}
+
+/* Images */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/yellow_hamamelis.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    position: relative;
+}
+
+/* senza olio */
+.senza {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1;
+    margin: 1rem 10rem;
+}
+
+.senza h2 {
+    font-size: 4.8rem;
+    font-family: 'Shadows Into Light', cursive;
+    margin: 1rem;
+    color: white;
+}
+
+.senza h3 {
+    font-size: 3.8rem;
+    font-family: 'Shadows Into Light', cursive;
+    margin: 1rem;
+    color: white;
+}
+
+.main {
+    background-color: #ffd859;
+}
+
+.shadowbox {
+    -webkit-box-shadow: 0px 0px 21px -5px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 21px -5px rgba(0,0,0,1);
+    box-shadow: 0px 0px 21px -5px rgba(0,0,0,1);
+
+    background-color: var(--primary);
+    width: 85%;
+    padding: 3rem;
+}
+
+.senzaolio, .somos{
+    margin: auto 0 auto auto;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    margin-bottom: 5rem;
+}
+
+.inst_ing {
+    margin: auto auto auto 0;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-bottom: 5rem;
+}
+
+.contacto {
+    background-color: #F7F7F7;
+    margin: auto 0 auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contacto_bg{
+    background-image: url(../images/paint.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.contacto .redes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Networks */
+.red {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive stuff */
+@media (min-width: 768px) {
+    .principal_navigation {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 460px) {
+    .image img{
+        width: 75%;
+        height: 50%;
+    }
+    .contacto{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .contacto .redes{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .senza {
+        margin: 1rem;
+    }
+}
